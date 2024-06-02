@@ -13,7 +13,7 @@ data "aws_ami" "ami_info" {
 
     filter {
         name   = "name"
-        values = ["OpenVPN Access Server Community Image-*"]
+        values = ["OpenVPN Access Server Community Image-fe8020db-*"]
     }
 
     filter {
@@ -24,10 +24,6 @@ data "aws_ami" "ami_info" {
     filter {
         name   = "virtualization-type"
         values = ["hvm"]
-    }  
+    } 
 
-    filter {
-      name = "product_codes"
-      values = ["marketplace:f2ew2wrz425a1jagnifd02u5t"]
-    }
-}
+} 
