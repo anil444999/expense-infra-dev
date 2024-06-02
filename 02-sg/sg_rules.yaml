@@ -2,7 +2,7 @@
   sg:
   - expense-dev-db
   - expense-dev-backend
-  - expense-dev-app-alb
+  - expense-dev-app-alb #backend alb
   - expense-dev-frontend
   - expense-dev-web-alb
   - expense-dev-bastion

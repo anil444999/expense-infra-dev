@@ -1,11 +1,10 @@
 resource "aws_key_pair" "vpn" {
-  key_name   = "openvpn"
+  key_name   = "vpn"
   # you can paste the public key directly like this 
-  #public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMlFH0CJrsPnM21P7sCaiJ0R8jSCsaTm6jx7EaQBfxOu yerra@LAPTOP-CUS9THHT
+  # public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMlFH0CJrsPnM21P7sCaiJ0R8jSCsaTm6jx7EaQBfxOu yerra@LAPTOP-CUS9THHT
   public_key = file("~/.ssh/openvpn.pub")
   # ~ means windows home directory
 }
-
 
 module "vpn" {
   source  = "terraform-aws-modules/ec2-instance/aws"
