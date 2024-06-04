@@ -1,5 +1,5 @@
-data "aws_ssm_parameter" "app_alb_sg_id" {
-  name = "/${var.project_name}/${var.environment}/app_alb_sg_id"
+data "aws_ssm_parameter" "backend_sg_id" {
+  name = "/${var.project_name}/${var.environment}/backend_sg_id"
 }
 
 data "aws_ssm_parameter" "private_subnet_ids" {
@@ -9,11 +9,11 @@ data "aws_ssm_parameter" "private_subnet_ids" {
 data "aws_ami" "ami_info" {
 
     most_recent = true
-    owners = ["679593333241"]
+    owners = ["973714476881"]
 
     filter {
         name   = "name"
-        values = ["OpenVPN Access Server Community Image-fe8020db-*"]
+        values = ["RHEL-9-DevOps-Practice"]
     }
 
     filter {
@@ -25,5 +25,4 @@ data "aws_ami" "ami_info" {
         name   = "virtualization-type"
         values = ["hvm"]
     }
-
 }
